@@ -10,5 +10,9 @@ class Validateur {
         $aujourdhui = strtotime(date('Y-m-d'));
         return $dateExpiration > $aujourdhui;
     }
+
+    public function estQuantiteValide($quantite) {
+        return is_int($quantite) && $quantite > 0;
+    }
 }
 ?> 
